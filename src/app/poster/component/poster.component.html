@@ -1,0 +1,12 @@
+<md-card class="example-card mat-card" style="width: 300px;padding-bottom: 0;">
+        <md-card-header class="mat-card-header">
+            <div class="example-header-image mat-card-avatar">
+                <img style="width: 100%;height: 100%;border-radius: 50%" [src]="result.Poster"  *ngIf="isLoaded">
+            </div>
+            <div class="mat-card-header-text">
+                <md-card-title class="mat-card-title">{{result.Title}}</md-card-title>
+                <md-card-subtitle class="mat-card-subtitle">{{result.Year}}</md-card-subtitle>
+            </div>
+        </md-card-header>
+        <img md-card-image="" [src]="result.Poster" class="mat-card-image"  *ngIf="isLoaded">
+    </md-card>

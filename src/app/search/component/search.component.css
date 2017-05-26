@@ -1,0 +1,35 @@
+.example-card{
+    width: 400px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 170px;
+}
+.example-header-image{
+    background-image: url(https://lh6.googleusercontent.com/-iNxAZ7kI3Hk/AAAAAAAAAAI/AAAAAAAAIe4/CDE3cvXzrBM/s0-c-k-no-ns/photo.jpg);
+    background-size: cover;
+}
+.yearSearch{
+    float:right;
+}
+.mat-progress-spinner{
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+}
+.search-content{
+    margin-top:16px;
+}
+.mat-card-subtitle {
+    font-size: 12px;
+    color:#595959;
+}
+.mat-card-title{
+    color: #00bcd4;   
+}
+.mat-card-title span{
+    font-weight: bold;
+}
