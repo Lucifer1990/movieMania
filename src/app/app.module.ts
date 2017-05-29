@@ -17,6 +17,8 @@ import { SearchComponent } from "./search/component/search.component";
 import { DashboardComponent } from "./dashboard/component/dashboard.component";
 import { PosterComponent } from "./poster/component/poster.component";
 import { SharedService } from "./shared/shared.service";
+import { BasicInformationComponent } from "./basic-information/component/basic-information.component";
+import { ImdbRatingComponent } from "./imdb-rating/component/imdb-rating.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -37,7 +39,9 @@ const routes: Routes = [
     HeaderComponent,
     SearchComponent,
     DashboardComponent,
-    PosterComponent],
+    PosterComponent,
+    BasicInformationComponent,
+    ImdbRatingComponent],
   providers: [SharedService],
   bootstrap: [AppComponent]
 })
