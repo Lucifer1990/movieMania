@@ -9,7 +9,8 @@ import { SharedServiceDataModel } from "../../shared/shared.model";
 })
 export class PosterComponent implements OnInit {
   allInfo: SharedServiceDataModel = <SharedServiceDataModel>{};
-  isLoaded:boolean = false;
+  returnArray:any = [];
+  isLoaded: boolean = false;
   constructor(private _SharedService: SharedService) { }
 
   ngOnInit() {
@@ -19,8 +20,20 @@ export class PosterComponent implements OnInit {
         for (let key in result) {
           this.allInfo[key] = result[key];
         }
+        this.loopGenre(this.allInfo);    
         this.isLoaded = true;
       }, error => {
       });
+  }
+
+  loopGenre(allInfo: SharedServiceDataModel) {
+    var genre = allInfo.Genre;
+    var genre_array = genre.split(',');
+
+    for (var i = 0; i < genre_array.length; i++) {
+      // Trim the excess whitespace.
+      genre_array[i] = genre_array[i].replace(/^\s*/, "").replace(/\s*$/, "");  
+      this.returnArray.push(genre_array[i]);
+    }
   }
 }
