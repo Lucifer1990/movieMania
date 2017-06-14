@@ -1,7 +1,12 @@
 .header-container{
     height:53px;
-    background: #00bcd4;
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    font-weight: 300;
+    background-color: #7392c2 20%;
+    background-image: radial-gradient(farthest-side ellipse at 10% 0, #7392c2 20%, #00bcd4);
+    background-image: -webkit-radial-gradient(10% 0, farthest-side ellipse, #7392c2 20%, #00bcd4);
+    background-image: -moz-radial-gradient(10% 0, farthest-side ellipse, #7392c2 20%, #00bcd4);
+    background-attachment: fixed, fixed;
 }
 .header-container .title{
     font-size: 18px;

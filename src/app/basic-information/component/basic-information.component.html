@@ -1,29 +1,65 @@
-<div class="basic-info" style="">
-            <md-card class="example-card mat-card" style="padding-bottom: 0">
-                <md-card-header class="mat-card-header">
-                    <div class="example-header-image mat-card-avatar">
-                        <i class="material-icons" style="font-size:30px;">info outline</i>
-                    </div>
-                    <div class="mat-card-header-text" style="margin-top:7px;">
-                        Basic information
-                    </div>
-                </md-card-header>
-                <md-card-content class="mat-card-content search-content" style="padding-bottom: 15px;padding-top: 10px;">
-                    <p>
-                        <b>Rated:</b>{{allInfo.Rated}} <br/>
-                        <b>Released:</b>{{allInfo.Released}} <br/>
-                        <b>Runtime:</b>{{allInfo.Runtime}} <br/>
-                        <b>Writer:</b>{{allInfo.Writer}} <br/>
-                        <b>Actors:</b>{{allInfo.Actors}} <br/>
-                        <b>Language:</b>{{allInfo.Language}} <br/>
-                        <b>Country:</b>{{allInfo.Country}} <br/>
-                        <b>Awards:</b>{{allInfo.Awards}} <br/>
-                        <b>Type:</b>{{allInfo.Type}} <br/>
-                        <b>DVD:</b>{{allInfo.DVD}} <br/>
-                        <b>BoxOffice:</b>{{allInfo.BoxOffice}} <br/>
-                        <b>Production:</b>{{allInfo.Production}} <br/>
-                        <b>Website:</b>{{allInfo.Website}} <br/>
-                    </p>
-                </md-card-content>
-            </md-card>
+<div class="basic-info-container">
+    <div class="row">
+        <div class="grid">
+            <div class="icon-parent green-background">
+                <md-icon role="img" class="material-icons mat-icon" aria-label="search">search</md-icon>
+            </div>
+            <div class="data-parent green-text">
+                <div class="data-details">{{allInfo.Type}}</div>
+                <div class="data-type">Type</div>
+            </div>
         </div>
+        <div class="grid">
+            <div class="icon-parent red-background">
+                <md-icon role="img" class="material-icons mat-icon" aria-label="search"></md-icon>
+            </div>
+            <div class="data-parent red-text">
+                <div class="data-details">{{allInfo.BoxOffice}}</div>
+                <div class="data-type">BoxOffice</div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="icon-parent orange-background">
+                <md-icon role="img" class="material-icons mat-icon" aria-label="search"></md-icon>
+            </div>
+            <div class="data-parent orange-text">
+                <div class="data-details">{{allInfo.imdbVotes}}</div>
+                <div class="data-type">IMDB votes</div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="grid">
+            <div class="icon-parent green-background">
+                <md-icon role="img" class="material-icons mat-icon" aria-label="search">search</md-icon>
+            </div>
+            <div class="data-parent green-text">
+                <div class="data-details">{{allInfo.Production}}</div>
+                <div class="data-type">Production</div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="icon-parent red-background">
+                <md-icon role="img" class="material-icons mat-icon" aria-label="search"></md-icon>
+            </div>
+            <div class="data-parent red-text">
+                <div class="data-details">{{allInfo.Released}}</div>
+                <div class="data-type">Released</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="icon-parent orange-background">
+                <md-icon role="img" class="material-icons mat-icon" aria-label="search"></md-icon>
+            </div>
+            <div class="data-parent orange-text">
+                <div class="data-details">{{allInfo.Metascore}}</div>
+                <div class="data-type">Metascore</div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

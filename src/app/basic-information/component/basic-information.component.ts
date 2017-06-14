@@ -3,7 +3,7 @@ import { SharedServiceDataModel } from "../../shared/shared.model";
 import { SharedService } from "../../shared/shared.service";
 
 @Component({
-  selector: 'basic-information',
+  selector: 'basic-information-grid',
   templateUrl: 'app/basic-information/component/basic-information.component.html',
   styleUrls: ['app/basic-information/component/basic-information.component.css'],
 })
