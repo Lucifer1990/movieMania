@@ -18,7 +18,8 @@ import { DashboardComponent } from "./dashboard/component/dashboard.component";
 import { PosterComponent } from "./poster/component/poster.component";
 import { SharedService } from "./shared/shared.service";
 import { BasicInformationComponent } from "./basic-information/component/basic-information.component";
-import { ImdbRatingComponent } from "./imdb-rating/component/imdb-rating.component";
+import { PlotComponent } from "./plot/component/plot.component";
+import { OtherInformationComponent } from "./other-information/component/other-information.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -41,7 +42,9 @@ const routes: Routes = [
     DashboardComponent,
     PosterComponent,
     BasicInformationComponent,
-    ImdbRatingComponent],
+    PlotComponent,
+    OtherInformationComponent
+    ],
   providers: [SharedService],
   bootstrap: [AppComponent]
 })
