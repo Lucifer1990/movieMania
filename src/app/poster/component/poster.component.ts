@@ -27,7 +27,7 @@ export class PosterComponent implements OnInit {
   }
 
   loopGenre(allInfo: SharedServiceDataModel) {
-    var genre = allInfo.Genre;
+    var genre = allInfo.Genre
     var genre_array = genre.split(',');
 
     for (var i = 0; i < genre_array.length; i++) {

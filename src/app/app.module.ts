@@ -20,9 +20,10 @@ import { SharedService } from "./shared/shared.service";
 import { BasicInformationComponent } from "./basic-information/component/basic-information.component";
 import { PlotComponent } from "./plot/component/plot.component";
 import { OtherInformationComponent } from "./other-information/component/other-information.component";
+import { PeopleComponent } from "./people/component/people.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'home', component: SearchComponent, data: { title: 'home' } },
   { path: 'dashboard', component: DashboardComponent, data: { title: 'dashboard' } },
 ]
@@ -43,7 +44,8 @@ const routes: Routes = [
     PosterComponent,
     BasicInformationComponent,
     PlotComponent,
-    OtherInformationComponent
+    OtherInformationComponent,
+    PeopleComponent
     ],
   providers: [SharedService],
   bootstrap: [AppComponent]
