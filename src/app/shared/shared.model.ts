@@ -27,3 +27,8 @@ export interface SharedServiceDataModel {
 	Website: string;
 	Response: string;
 }
+
+export interface SearchCriteriaDataModel {
+	movieName:string;
+	releaseYear:string;
+}

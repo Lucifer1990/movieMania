@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/observable';
 import { Subject } from 'rxjs/subject';
 import 'rxjs/add/operator/map';
 
-import { SharedServiceDataModel } from "./shared.model";
+import { SharedServiceDataModel, SearchCriteriaDataModel } from "./shared.model";
 
 
 @Injectable()
@@ -22,16 +22,13 @@ export class SharedService {
         return this.basicInfo.asObservable();
     }
 
-    getAllInformationForFirstTime() {
-        let url: string;
-        let formData: {};
-        url = "app/json/allInfo.json";
-        formData = {
-            name: "logan",
-            year: "2017"
-        }
+    getAllInformationForFirstTime(searchCriteriaObject:SearchCriteriaDataModel) {
 
-        return this._Http.get(url,formData)
+        var movie = searchCriteriaObject.movieName;
+        var year = ((searchCriteriaObject.releaseYear == "" || searchCriteriaObject.releaseYear == undefined)? "" : ("&y="+searchCriteriaObject.releaseYear));
+        let url: string = "http://www.omdbapi.com/?t="+movie+year+"&plot=full"+"&apikey=fcbd49b5";
+
+        return this._Http.get(url)
                 .map(response => response.json());
             //.map(res => res as SharedServiceDataModel);
     }

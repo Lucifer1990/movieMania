@@ -1,0 +1,22 @@
+<div id="myNav" class="overlay">
+    <!--a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a-->
+    <div class="overlay-content">
+        <div class="form">
+            <div class="thumbnail"><img src="https://thetomatos.com/wp-content/uploads/2016/02/movie-camera-icon-cliparts.png"></div>
+            <form class="register-form">
+                <input type="text" placeholder="search by name" [(ngModel)]="movieName" name="movieName">
+                <input type="text" placeholder="year of release" [(ngModel)]="releaseYear"  name="releaseYear">
+                <div class="option">
+                    <a href="javascript:void(0)" id="reset">Reset</a>
+                    <em>or</em>
+                    <a href="javascript:void(0)" id="search" (click)="searchMovie()">Search</a>
+                </div>
+
+                <p class="message">
+                    <md-progress-bar mode="indeterminate" *ngIf="showLoader"></md-progress-bar>
+                    <span>{{errorMsg}}</span>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

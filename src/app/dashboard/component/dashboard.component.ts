@@ -19,13 +19,12 @@ export class DashboardComponent implements OnInit {
 
   getAlldata() {
     this._SharedService
-      .getAllInformationForFirstTime()
+      .getAllInformation()
       //.subscribe((result: SharedServiceDataModel) => {
         .subscribe(result => {
         for (let key in result) {
           this.allInfo[key] = result[key];
         }
-        this._SharedService.setAllInformation(this.allInfo);
         this.isLoaded = true;
       }, error => {
       });

@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { HttpModule } from "@angular/http";
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCheckboxModule, MdCardModule } from '@angular/material';
 import { MdProgressSpinnerModule } from '@angular/material';
+import {MdProgressBarModule} from '@angular/material';
 import { MdInputModule } from '@angular/material';
 
 import 'hammerjs';
@@ -21,6 +23,7 @@ import { BasicInformationComponent } from "./basic-information/component/basic-i
 import { PlotComponent } from "./plot/component/plot.component";
 import { OtherInformationComponent } from "./other-information/component/other-information.component";
 import { PeopleComponent } from "./people/component/people.component";
+import { SearchModalComponent } from "./search-modal/component/search-modal.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -34,8 +37,10 @@ const routes: Routes = [
     MdButtonModule,
     MdCheckboxModule,
     MdProgressSpinnerModule,
+    MdProgressBarModule,
     MdInputModule,
     MdCardModule,
+    FormsModule,
     HttpModule],
   declarations: [AppComponent,
     HeaderComponent,
@@ -45,7 +50,8 @@ const routes: Routes = [
     BasicInformationComponent,
     PlotComponent,
     OtherInformationComponent,
-    PeopleComponent
+    PeopleComponent,
+    SearchModalComponent
     ],
   providers: [SharedService],
   bootstrap: [AppComponent]
