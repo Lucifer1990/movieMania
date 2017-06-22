@@ -11,6 +11,8 @@ import { MdButtonModule, MdCheckboxModule, MdCardModule } from '@angular/materia
 import { MdProgressSpinnerModule } from '@angular/material';
 import {MdProgressBarModule} from '@angular/material';
 import { MdInputModule } from '@angular/material';
+import { ChartModule } from 'angular2-highcharts';
+import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome'
 
 import 'hammerjs';
 
@@ -24,6 +26,7 @@ import { PlotComponent } from "./plot/component/plot.component";
 import { OtherInformationComponent } from "./other-information/component/other-information.component";
 import { PeopleComponent } from "./people/component/people.component";
 import { SearchModalComponent } from "./search-modal/component/search-modal.component";
+import { RatingComponent } from "./third-party-rating/component/third-party-rating.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -40,7 +43,9 @@ const routes: Routes = [
     MdProgressBarModule,
     MdInputModule,
     MdCardModule,
+    ChartModule.forRoot(require('highcharts')),
     FormsModule,
+    Angular2FontawesomeModule,
     HttpModule],
   declarations: [AppComponent,
     HeaderComponent,
@@ -51,6 +56,7 @@ const routes: Routes = [
     PlotComponent,
     OtherInformationComponent,
     PeopleComponent,
+    RatingComponent,
     SearchModalComponent
     ],
   providers: [SharedService],

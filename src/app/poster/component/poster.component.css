@@ -20,6 +20,7 @@
     color: white;
     margin-left: 5px;
     border-radius: 5px;
+    vertical-align: super;
 }
 .poster-container .poster-text .mat-card-title i{
     font-size: 13px;
@@ -35,3 +36,34 @@
     border-radius: 3px;
     margin-right: 5px;
 } 
+.website{
+    width:92%;
+    margin-top:15px;
+}
+.website .inner-website{
+    background-color: #23b7e5;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 4px;
+}
+.inner-website .link{
+    font-size: 20px;
+    font-weight: 800;
+    display: block;
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
+.inner-website .link a{
+    font-size: 14px;
+}
+.ellipsis{
+    max-width: 170px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

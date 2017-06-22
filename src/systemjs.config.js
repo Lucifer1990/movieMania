@@ -27,9 +27,12 @@
       '@angular/animations/browser': 'npm:@angular/animations/bundles/animations-browser.umd.js',
       '@angular/platform-browser/animations': 'npm:@angular/platform-browser/bundles/platform-browser-animations.umd.js',
       'hammerjs': 'npm:hammerjs/hammer.js',
+      'angular2-highcharts': 'node_modules/angular2-highcharts',
+      'highcharts': 'node_modules/highcharts',
+      'angular2-fontawesome': 'node_modules/angular2-fontawesome',
 
       // other libraries
-      'rxjs':                      'npm:rxjs',
+      'rxjs': 'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -44,7 +47,16 @@
       },
       rxjs: {
         defaultExtension: 'js'
-      }
+      },
+      highcharts: {
+        main: './highcharts.js',
+        defaultExtension: 'js'
+      },
+      'angular2-highcharts': {
+        main: './index.js',
+        defaultExtension: 'js'
+      },
+      'angular2-fontawesome': { defaultExtension: 'js' }
     }
   });
 })(this);
