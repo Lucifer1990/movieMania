@@ -13,6 +13,7 @@ export class SearchModalComponent implements OnInit {
     releaseYear: string;
     isLoaded: boolean = false;
     showLoader: boolean = false;
+    searchCriteriaObject: any;
     allInfo: SharedServiceDataModel = <SharedServiceDataModel>{};
 
     constructor(private _SharedService: SharedService) { }
@@ -23,14 +24,22 @@ export class SearchModalComponent implements OnInit {
 
     searchMovie() {
         this.showLoader = true;
-
-        var searchCriteriaObject = {
+        this.searchCriteriaObject = {
             movieName: this.movieName,
             releaseYear: this.releaseYear
         }
+
+        if (this.movieName != "" && this.movieName != undefined && this.movieName != null) {
+            this.callSharedService();
+        } else {
+            this.showLoader = false;
+            this.errorMsg = "Please enter name!!";
+        }
+    }
+
+    callSharedService() {
         this._SharedService
-            .getAllInformationForFirstTime(searchCriteriaObject)
-            //.subscribe((result: SharedServiceDataModel) => {
+            .getAllInformationForFirstTime(this.searchCriteriaObject)
             .subscribe(result => {
                 this.showLoader = false;
 
@@ -46,6 +55,8 @@ export class SearchModalComponent implements OnInit {
                 }
                 this.isLoaded = true;
             }, error => {
+                this.showLoader = false;
+                this.errorMsg = error.statusText;
             });
     }
 
@@ -55,6 +66,11 @@ export class SearchModalComponent implements OnInit {
 
     closeNav() {
         document.getElementById("myNav").style.height = "0%";
+    }
+
+    reset(){
+        this.movieName = "";
+        this.releaseYear = "";
     }
 
 }

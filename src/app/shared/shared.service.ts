@@ -26,7 +26,7 @@ export class SharedService {
 
         var movie = searchCriteriaObject.movieName;
         var year = ((searchCriteriaObject.releaseYear == "" || searchCriteriaObject.releaseYear == undefined)? "" : ("&y="+searchCriteriaObject.releaseYear));
-        let url: string = "http://www.omdbapi.com/?t="+movie+year+"&plot=full"+"&apikey=fcbd49b5";
+        let url: string = "http://www.omdbapi.com/?t="+movie+year+"&plot=full"+"&apikey=c22bc403";
 
         return this._Http.get(url)
                 .map(response => response.json());

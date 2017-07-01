@@ -30,4 +30,8 @@ export class DashboardComponent implements OnInit {
       });
   }
 
+  search(){
+    document.getElementById("myNav").style.height = "100%";
+  }
+
 }
