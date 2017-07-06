@@ -1,32 +1,25 @@
 <modal></modal>
 
-<div class="content" style="padding:20px;overflow: hidden;">
-    <div class="section-one" style="width:30%;display:inline-block;vertical-align: top;">
+<div class="content">
+    <div class="section-one">
         <poster></poster>
     </div>
-
-  <div class="section-two" style="width:69%;display:inline-block;vertical-align: top;">
-      <basic-information-grid></basic-information-grid>
-        
-        <div style="width:100%;margin-top:15px;">
-            <div style="width:48%;display: inline-block;margin-right:15px;">
+    <div class="section-two">
+        <basic-information-grid></basic-information-grid>
+        <div class="inside-section-two">
+            <div class="left-inside">
                 <rating></rating>
-
                 <people></people>
-
             </div>
- 
-            <div style="width:48%;display: inline-block;vertical-align: top;">
+            <div class="right-inside">
                 <plot [theData]="allInfo"></plot>
                 <other-information [theData]="allInfo"></other-information>
             </div>
- 
         </div>
- 
     </div>
- 
 
-<button class="mat-fab" md-fab="" (click)="search()">
+
+    <button class="mat-fab" md-fab="" (click)="search()">
         <span class="mat-button-wrapper">
             <md-icon role="img" class="material-icons mat-icon" aria-label="search">search</md-icon>
         </span>

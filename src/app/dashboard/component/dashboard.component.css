@@ -4,3 +4,31 @@
     bottom: 8%;
     right: 4%;
 }
+.content{
+    padding:20px;
+    overflow: hidden;
+}
+.content .section-one{
+    width:30%;
+    display:inline-block;
+    vertical-align: top;
+}
+.content .section-two{
+    width:69%;
+    display:inline-block;
+    vertical-align: top;
+}
+.inside-section-two{
+    width:100%;
+    margin-top:15px;
+}
+.inside-section-two .left-inside{
+    width:48%;
+    display: inline-block;
+    margin-right:15px;
+}
+.inside-section-two .right-inside{
+    width:48%;
+    display: inline-block;
+    vertical-align: top;
+}

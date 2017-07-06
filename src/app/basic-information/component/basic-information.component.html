@@ -14,7 +14,7 @@
                 <i class="fa fa-usd" aria-hidden="true"></i>
             </div>
             <div class="data-parent red-text">
-                <div class="data-details">{{allInfo.BoxOffice}}</div>
+                <div class="data-details">{{ ((allInfo.BoxOffice == undefined)? "N/A" : allInfo.BoxOffice) }}</div>
                 <div class="data-type">BoxOffice</div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                 <md-icon role="img" class="material-icons mat-icon" aria-label="search">search</md-icon>
             </div>
             <div class="data-parent green-text">
-                <div class="data-details">{{allInfo.Production}}</div>
+                <div class="data-details">{{ ((allInfo.Production == undefined)? "N/A" : allInfo.Production) }}</div>
                 <div class="data-type">Production</div>
             </div>
         </div>

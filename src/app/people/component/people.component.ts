@@ -29,6 +29,8 @@ export class PeopleComponent implements OnInit {
   }
 
 loopPeople(allInfo: SharedServiceDataModel) {
+    this.returnArrayWriter.length = 0;
+    this.returnArrayActor.length = 0;
     var writer = this.allInfo.Writer;
     var actor = this.allInfo.Actors;
     var writer_array = writer.split(',');
